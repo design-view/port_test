@@ -1,0 +1,76 @@
+.productLists {
+  > section:nth-child(1) {
+    img {
+      width: 100%;
+    }
+  }
+  .introHeader{
+    text-align: center;
+    > div {
+      margin: 100px 0;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      width: 80%;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+  }
+  .contents {
+    display: flex;
+    justify-content: space-between;
+  }
+  #mobileSearchBox {
+    display: none;
+  }
+  .noSelectedProducts {
+    background-color: aliceblue;
+  }
+  .noSelectedProducts::before {
+    content: "We can't find products matching the selection";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .productLists {
+    .contents {
+      flex-direction: column;
+      align-items: center;
+    }
+    #mobileSearchBox {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+    .collectionLists {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #collArticle {
+      width: 90%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #collArticle {
+      flex-direction: column;
+      height: 600px;
+      #img {
+        width: 100%;
+        height: 50%;
+      }
+      .collectDesc {
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+}
